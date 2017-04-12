@@ -1,5 +1,6 @@
 import pandas
 
+from compare import compare
 def extract_document_links_from_csv(csv_file):
   df = pandas.read_csv(csv_file)
 
@@ -14,5 +15,5 @@ if __name__ == "__main__":
     left_url = link['FRUS Link']
     right_url = link['Cables Link']
     pair_id = link['Pair ID']
-
-    print "Pair ID: {}, Left Url: {}, Right Url: {}".format(pair_id, left_url, right_url)
+    if(int(pair_id) >= 2025):
+      print "Pair ID: {}, Left Url: {}, Right Url: {}, Percent Match: {}".format(pair_id, left_url, right_url, compare(left_url, right_url))

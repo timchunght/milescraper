@@ -13,9 +13,9 @@ def compare(left_url, right_url):
 
 	cleaned_left = new_left.lower().replace('\n', '').replace('\r', '').replace(" ", "")
 	cleaned_right = new_right.lower().replace('\n', '').replace('\r', '').replace(" ", "")
-	print(cleaned_left)
-	print("===================================")
-	print(cleaned_right)
+	# print(cleaned_left)
+	# print("===================================")
+	# print(cleaned_right)
 
 	percent_match = fuzz.partial_ratio(cleaned_left, cleaned_right)
 	return percent_match
