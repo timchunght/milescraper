@@ -27,7 +27,7 @@ def left_url_content(url):
 
 
 
-	print BeautifulSoup(html_text).text
+	# print BeautifulSoup(html_text).text
 	return BeautifulSoup(html_text).text
 
 if __name__ == "__main__":
