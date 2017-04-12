@@ -1,6 +1,8 @@
 from lxml import etree
 import requests
 from io import StringIO, BytesIO
+from BeautifulSoup import BeautifulSoup
+
 
 
 
@@ -17,14 +19,16 @@ def left_url_content(url):
 
 	# print tree
 
-	parser = etree.HTMLParser()
-	tree = etree.parse(StringIO(html_text), parser)
+	# parser = etree.HTMLParser()
+	# tree = etree.parse(StringIO(html_text), parser)
 
-	result = etree.tostring(tree.getroot(),
-	pretty_print=True, method="html")
+	# result = etree.tostring(tree.getroot(),
+	# pretty_print=True, method="html")
 
-	print result
-	return html_text
 
-if __name__ == "main":
-	left_url_content("")
+
+	print BeautifulSoup(html_text).text
+	return BeautifulSoup(html_text).text
+
+if __name__ == "__main__":
+	left_url_content("history-lab.org/documents/frus1969-76ve08d194")
