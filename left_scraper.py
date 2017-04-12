@@ -31,4 +31,4 @@ def left_url_content(url):
 	return BeautifulSoup(html_text).text
 
 if __name__ == "__main__":
-	left_url_content("history-lab.org/documents/frus1969-76ve08d194")
+	print left_url_content("history-lab.org/documents/frus1969-76ve08d194")
