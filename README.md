@@ -1,7 +1,7 @@
 ```
 virtualenv venv
 source venv/bin/activate
-pip install lxml requests
+pip install requests beautifulsoup fuzzywuzzy lxml
 ```
 
 2098,frus1969-76ve08d194,1975NEWDE04555,history-lab.org/documents/frus1969-76ve08d194,history-lab.org/documents/1975NEWDE04555,Yes,,Yes,,0.973578,Yes,,
