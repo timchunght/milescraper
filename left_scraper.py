@@ -5,7 +5,13 @@ from io import StringIO, BytesIO
 
 
 def left_url_content(url):
-	document = requests.get(url)
+
+	parts = url.split("/")
+	page_id = parts[len(parts)-1]
+	api_url = "http://history-lab.org/api/documents/" + page_id
+
+
+	document = requests.get(api_url)
 	html_text = document.json()["body"]
 	# tree = html.fromstring(page.content)
 
