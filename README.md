@@ -1,5 +1,5 @@
 ```
 virtualenv venv
 source venv/bin/activate
-pip install lxml 
+pip install lxml requests
 ```
